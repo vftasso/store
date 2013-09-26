@@ -46,4 +46,31 @@
     </div>
   </div>
 
+
+  <script id="external">
+    (function() {
+        var script = document.createElement('script'); 
+
+        script.type  = 'text/javascript';
+        script.async = true;
+        script.src   = "http://localhost:3000/client/javascripts/widget.js";
+
+        var entry = document.getElementsByTagName('script')[0];
+        entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+
+
+<!--  <script id="external">
+      var iframe = document.createElement('iframe');
+      iframe.style.width = '250px';
+      iframe.style.height = '300px';
+      iframe.style.border = 'none';
+      iframe.src = "http://localhost:3000/client/iframe.html";
+
+      var insert = document.getElementById('external');
+      insert.parentNode.insertBefore(iframe, insert);
+  </script>-->
+
+
 </div>
