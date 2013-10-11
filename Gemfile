@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'spree', '2.0.3'
+gem 'rmagick'
 
 group :production do
   gem 'pg'
