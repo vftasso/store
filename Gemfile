@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'spree', '2.0.3'
 gem 'rmagick'
+gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-0-stable'
 
 group :production do
   gem 'pg'
