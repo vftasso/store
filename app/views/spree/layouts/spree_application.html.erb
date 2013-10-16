@@ -6,6 +6,17 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render :partial => 'spree/shared/head' %>
+
+    <script type="text/javascript">
+      var _trustvox = _trustvox || [];
+      _trustvox.push(['_storeId', '1']);
+
+      (function() {
+        var tv = document.createElement('script'); tv.type = 'text/javascript'; tv.async = true;
+        tv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '<%= Store::Application.config.widget_host %>/assets/publisher/trustvox_widget.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tv, s);
+      })();
+    </script>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
@@ -37,17 +48,3 @@
 
   </body>
 </html>
-
-  <script>
-    (function() {
-        var script = document.createElement('script');
-        var host = "<%= Store::Application.config.widget_host %>";
-
-        script.type  = 'text/javascript';
-        script.async = true;
-        script.src   = host + "/assets/publisher/trustvox_widget.js";
-
-        var entry = document.getElementsByTagName('script')[0];
-        entry.parentNode.insertBefore(script, entry);
-    }());
-  </script>

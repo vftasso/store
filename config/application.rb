@@ -24,7 +24,7 @@ module Store
       end
     end
 
-    config.widget_host = "http://0.0.0.0:3000"
+    config.widget_host = "0.0.0.0:3000"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
